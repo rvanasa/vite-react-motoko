@@ -1,5 +1,6 @@
 tasks:
   - init: |
+      npm install
       export PATH="$HOME/bin:$PATH"
       echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
       sudo apt-get install -y libunwind-dev
