@@ -1,0 +1,33 @@
+{
+  "name": "vite-react-motoko",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "setup": "npm i && dfx canister create backend && dfx generate backend",
+    "start": "run-p frontend backend",
+    "frontend": "vite --port 3000",
+    "backend": "mo-dev --generate --deploy",
+    "build": "tsc && vite build",
+    "deploy": "dfx deploy",
+    "sources": "mops sources",
+    "postinstall": "mops install"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@dfinity/agent": "^0.15.1",
+    "@dfinity/candid": "^0.15.1",
+    "@dfinity/principal": "^0.15.1",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "@vitejs/plugin-react": "^2.2.0",
+    "mo-dev": "^0.3.0",
+    "mops": "^3.0.2",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.0"
+  }
+}

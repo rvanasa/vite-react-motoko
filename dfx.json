@@ -1,0 +1,21 @@
+{
+    "defaults": {
+        "build": {
+            "packtool": "npm run --silent sources"
+        }
+    },
+    "canisters": {
+        "backend": {
+            "type": "motoko",
+            "main": "backend/Main.mo"
+        },
+        "frontend": {
+            "dependencies": ["backend"],
+            "type": "assets",
+            "frontend": {
+                "entrypoint": "dist/index.html"
+            },
+            "source": ["dist/"]
+        }
+    }
+}
