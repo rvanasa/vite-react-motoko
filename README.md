@@ -1,5 +1,9 @@
 # Vite + React + Motoko
 
+Click the link below to try out this starter project entirely in your browser:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rvanasa/vite-react-motoko)
+
 ## Overview
 
 This full-stack Web3 template makes it easy to get started with dapp development on the [Internet Computer](https://internetcomputer.org/) (IC).
