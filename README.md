@@ -28,7 +28,7 @@ Ensure that [Node.js](https://nodejs.org/en/) and [dfx](https://internetcomputer
 Run the following commands in a new, empty project directory:
 
 ```sh
-npx degit dfinity/motoko-dev-server/examples/vite-react # Download this starter project
+npx degit rvanasa/vite-react-motoko # Download this starter project
 dfx start --clean --background # Run dfx in the background
 npm run setup # Install packages, deploy canisters, and generate type bindings
 
