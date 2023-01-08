@@ -14,7 +14,7 @@ tasks:
 
 vscode:
   extensions:
-    - "dfinity-foundation.vscode-motoko"
+    - dfinity-foundation.vscode-motoko
 
 ports:
   - name: Replica
