@@ -10,7 +10,7 @@
     "backend": "mo-dev --generate --deploy",
     "build": "tsc && vite build",
     "deploy": "dfx deploy",
-    "format": "prettier --write 'src/**/*' 'backend/**/*.mo'",
+    "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\" \"backend/**/*.mo\"",
     "sources": "mops sources",
     "postinstall": "mops install"
   },

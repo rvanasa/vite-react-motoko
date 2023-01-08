@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import motokoLogo from "./assets/motoko_moving.png";
-import motokoShadowLogo from "./assets/motoko_shadow.png";
-import reactLogo from "./assets/react.svg";
-import { backend } from "./declarations/backend";
+import { useEffect, useState } from 'react';
+import './App.css';
+import motokoLogo from './assets/motoko_moving.png';
+import motokoShadowLogo from './assets/motoko_shadow.png';
+import reactLogo from './assets/react.svg';
+import { backend } from './declarations/backend';
 
 function App() {
   const [count, setCount] = useState<number | undefined>();
