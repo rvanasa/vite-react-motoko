@@ -5,11 +5,11 @@ tasks:
       echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
       sudo apt-get install -q -y libunwind-dev
       sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
-      dfx start --background
+      dfx start --background --emulator --clean
       npm run setup
       npm start
     command: |
-      dfx start --background
+      dfx start --background --emulator --clean
       npm start
 
 vscode:
