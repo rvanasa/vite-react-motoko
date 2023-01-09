@@ -1,5 +1,5 @@
 tasks:
-  - init: |
+  - before: |
       npm install &
       export PATH="$HOME/bin:$PATH"
       echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
@@ -7,9 +7,9 @@ tasks:
       sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
       dfx start --background --emulator --clean
       npm run setup
+    init: |
       npm start
     command: |
-      dfx start --background --emulator --clean
       npm start
 
 vscode:
