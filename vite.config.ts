@@ -22,25 +22,17 @@ export default defineConfig({
         'process.env.DFX_NETWORK': JSON.stringify(process.env.DFX_NETWORK),
         // Expose canister IDs provided by `dfx deploy`
         ...Object.fromEntries(
-            // Object.keys(process.env)
-            //     .filter((key) => key.startsWith('CANISTER_ID_'))
-            //     .map((key) => [
-            //         `process.env.${key
-            //             .substring('CANISTER_ID_'.length)
-            //             .toUpperCase()}_CANISTER_ID`,
-            //         JSON.stringify(process.env[key]),
-            //     ]),
             Object.entries(canisterIds).map(([name, ids]) => [
                 `process.env.${name.toUpperCase()}_CANISTER_ID`,
                 JSON.stringify(ids[network] || ids[defaultNetwork]),
             ]),
         ),
     },
+    // Local replica proxy
     server: {
         proxy: {
             '/api': {
                 target: 'http://127.0.0.1:4943',
-                // changeOrigin: true,
             },
         },
     },
