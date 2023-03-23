@@ -28,8 +28,8 @@ export default defineConfig({
             ]),
         ),
     },
-    // Local replica proxy
     server: {
+        // Local IC replica proxy
         proxy: {
             '/api': {
                 target: 'http://127.0.0.1:4943',
