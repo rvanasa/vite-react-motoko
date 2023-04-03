@@ -3,11 +3,11 @@ import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { defineConfig } from 'vite';
 
-const defaultNetwork = 'local';
-const network = process.env['DFX_NETWORK'] || defaultNetwork;
+const localNetwork = 'local';
+const network = process.env['DFX_NETWORK'] || localNetwork;
 
 let canisterIdPath: string;
-if (network == 'local') {
+if (network == localNetwork) {
   // Local replica canister IDs
   canisterIdPath = join(__dirname, '.dfx/local/canister_ids.json');
 } else {
@@ -32,7 +32,7 @@ export default defineConfig({
     ...Object.fromEntries(
       Object.entries(canisterIds).map(([name, ids]) => [
         `process.env.${name.toUpperCase()}_CANISTER_ID`,
-        JSON.stringify(ids[network] || ids[defaultNetwork]),
+        JSON.stringify(ids[network] || ids[localNetwork]),
       ]),
     ),
   },
