@@ -1,22 +1,21 @@
 {
-    "dfx": "0.14.0",
-    "defaults": {
-        "build": {
-            "packtool": "npm run --silent sources"
-        }
+  "canisters": {
+    "backend": {
+      "type": "motoko",
+      "main": "backend/Main.mo"
     },
-    "canisters": {
-        "backend": {
-            "type": "motoko",
-            "main": "backend/Main.mo"
-        },
-        "frontend": {
-            "dependencies": ["backend"],
-            "type": "assets",
-            "frontend": {
-                "entrypoint": "dist/index.html"
-            },
-            "source": ["dist/"]
-        }
+    "frontend": {
+      "dependencies": ["backend"],
+      "type": "assets",
+      "frontend": {
+        "entrypoint": "dist/index.html"
+      },
+      "source": ["dist/"]
     }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "npm run --silent sources"
+    }
+  }
 }
