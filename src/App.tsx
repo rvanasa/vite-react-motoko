@@ -67,7 +67,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>backend/Main.mo</code> and save to test HMR
+          Edit <code>backend/Backend.mo</code> and save to test HMR
         </p>
       </div>
       <p className="read-the-docs">
