@@ -26,7 +26,6 @@ const canisterIds = JSON.parse(readFileSync(canisterIdPath, 'utf8'));
 export default defineConfig({
   plugins: [react()],
   define: {
-    global: 'window',
     'process.env.DFX_NETWORK': JSON.stringify(process.env.DFX_NETWORK),
     // Expose canister IDs provided by `dfx deploy`
     ...Object.fromEntries(
@@ -35,6 +34,13 @@ export default defineConfig({
         JSON.stringify(ids[network] || ids[localNetwork]),
       ]),
     ),
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      define: {
+        global: 'globalThis',
+      },
+    },
   },
   server: {
     // Local IC replica proxy
