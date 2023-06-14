@@ -6,6 +6,8 @@
 
 This project template gives you everything you need to build a Web3 application on the [Internet Computer](https://internetcomputer.org/).
 
+For an example of a real-world dapp built using this template, check out the [source code](https://github.com/dfinity/feedback) for DFINITY's [Developer Experience Feedback Board](https://dx.internetcomputer.org/).
+
 ## Create a New Project
 
 Make sure that [Node.js](https://nodejs.org/en/) `>= 16.x` and [`dfx`](https://internetcomputer.org/docs/current/developer-docs/build/install-upgrade-remove) `>= 0.12.x` are installed on your system.
