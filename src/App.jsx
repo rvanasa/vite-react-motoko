@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 import motokoLogo from './assets/motoko_moving.png';
 import motokoShadowLogo from './assets/motoko_shadow.png';
 import reactLogo from './assets/react.svg';
