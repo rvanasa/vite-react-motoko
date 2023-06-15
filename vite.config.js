@@ -6,7 +6,7 @@ import { defineConfig } from 'vite';
 const localNetwork = 'local';
 const network = process.env['DFX_NETWORK'] || localNetwork;
 
-let canisterIdPath: string;
+let canisterIdPath;
 if (network === localNetwork) {
   // Local replica canister IDs
   canisterIdPath = join(__dirname, '.dfx/local/canister_ids.json');

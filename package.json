@@ -8,8 +8,7 @@
     "start": "run-p frontend backend",
     "frontend": "vite --port 3000",
     "backend": "mo-dev --generate --deploy -y",
-    "build": "tsc && vite build",
-    "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\" \"backend/**/*.mo\"",
+    "build": "vite build",
     "sources": "mops sources",
     "postinstall": "mops install"
   },
@@ -27,10 +26,7 @@
     "ic-mops": "^0.8.7",
     "mo-dev": "^0.6.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.2",
-    "prettier-plugin-motoko": "^0.4.2",
     "sass": "^1.57.1",
-    "typescript": "^4.6.4",
     "vite": "^3.2.0"
   }
 }

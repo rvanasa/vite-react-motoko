@@ -6,7 +6,7 @@ import reactLogo from './assets/react.svg';
 import { backend } from './declarations/backend';
 
 function App() {
-  const [count, setCount] = useState<number | undefined>();
+  const [count, setCount] = useState();
   const [loading, setLoading] = useState(false);
 
   // Get the current counter value
