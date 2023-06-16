@@ -7,9 +7,6 @@
     "frontend": {
       "dependencies": ["backend"],
       "type": "assets",
-      "frontend": {
-        "entrypoint": "dist/index.html"
-      },
       "source": ["dist/"]
     }
   },
@@ -17,5 +14,7 @@
     "build": {
       "packtool": "npm run --silent sources"
     }
-  }
+  },
+  "output_env_file": ".env",
+  "version": 2
 }

@@ -3,6 +3,7 @@ import './App.css';
 import motokoLogo from './assets/motoko_moving.png';
 import motokoShadowLogo from './assets/motoko_shadow.png';
 import reactLogo from './assets/react.svg';
+import viteLogo from './assets/vite.svg';
 import { backend } from './declarations/backend';
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
     <div className="App">
       <div>
         <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
+          <img src={viteLogo} className="logo vite" alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
