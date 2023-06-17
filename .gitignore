@@ -29,3 +29,10 @@ dist-ssr
 .dfx
 .vessel
 .mops
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
