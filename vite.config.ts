@@ -1,7 +1,8 @@
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
-import EnvironmentPlugin from 'vite-plugin-environment';
+import environment from 'vite-plugin-environment';
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 export default defineConfig({
@@ -27,8 +28,8 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    EnvironmentPlugin('all', { prefix: 'CANISTER_' }),
-    EnvironmentPlugin('all', { prefix: 'DFX_' }),
-    EnvironmentPlugin({ BACKEND_CANISTER_ID: '' }),
+    environment('all', { prefix: 'CANISTER_' }),
+    environment('all', { prefix: 'DFX_' }),
+    environment({ BACKEND_CANISTER_ID: '' }),
   ],
 });
