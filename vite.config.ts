@@ -32,4 +32,11 @@ export default defineConfig({
     environment('all', { prefix: 'DFX_' }),
     environment({ BACKEND_CANISTER_ID: '' }),
   ],
+  test: {
+    environment: 'jsdom',
+    setupFiles: './src/setupTests.ts',
+    coverage: {
+      reporter: ['text', 'json', 'html'],
+    },
+  },
 });

@@ -9,6 +9,7 @@
     "frontend": "vite --port 3000",
     "backend": "mo-dev --generate --deploy -y",
     "build": "tsc && vite build",
+    "test": "vitest",
     "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\" \"backend/**/*.mo\"",
     "sources": "mops sources",
     "postinstall": "mops install"
@@ -21,11 +22,14 @@
     "@dfinity/agent": "^0.15.1",
     "@dfinity/candid": "^0.15.1",
     "@dfinity/principal": "^0.15.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "@vitejs/plugin-react": "^2.2.0",
+    "cross-fetch": "^3.1.6",
     "dotenv": "^16.1.4",
-    "ic-mops": "^0.8.7",
+    "ic-mops": "^0.14.1",
     "mo-dev": "^0.6.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.2",
@@ -33,6 +37,7 @@
     "sass": "^1.57.1",
     "typescript": "^4.6.4",
     "vite": "^3.2.7",
-    "vite-plugin-environment": "^1.1.3"
+    "vite-plugin-environment": "^1.1.3",
+    "vitest": "^0.32.2"
   }
 }
