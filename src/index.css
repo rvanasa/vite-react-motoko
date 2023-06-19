@@ -19,10 +19,10 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+}
 
-  &:hover {
-    color: #535bf2;
-  }
+a:hover {
+  color: #535bf2;
 }
 
 body {
@@ -48,15 +48,15 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s, opacity 1s;
+}
 
-  &:hover {
-    border-color: #646cff;
-  }
+button:hover {
+  border-color: #646cff;
+}
 
-  &:focus,
-  &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
