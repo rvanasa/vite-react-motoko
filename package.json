@@ -17,9 +17,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@dfinity/agent": "^0.15.1",
-    "@dfinity/candid": "^0.15.1",
-    "@dfinity/principal": "^0.15.1",
+    "@dfinity/agent": "^0.17.0",
+    "@dfinity/candid": "^0.17.0",
+    "@dfinity/principal": "^0.17.0",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "@vitejs/plugin-react": "^2.2.0",
