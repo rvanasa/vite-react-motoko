@@ -36,5 +36,6 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     setupFiles: 'setupTests.ts',
+    cache: { dir: '../node_modules/.vitest' },
   },
 });
