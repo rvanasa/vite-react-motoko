@@ -38,7 +38,7 @@ When ready, run `dfx deploy` to build and deploy your application.
 ## Documentation
 
 - [Vite developer docs](https://vitejs.dev/guide/)
-- [React quick start guide](https://beta.reactjs.org/learn)
+- [React quick start guide](https://react.dev/learn)
 - [Internet Computer docs](https://internetcomputer.org/docs/current/developer-docs/ic-overview)
 - [Motoko developer docs](https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/)
 - [MOPS usage instructions](https://j4mwm-bqaaa-aaaam-qajbq-cai.ic0.app/#/docs/install)
