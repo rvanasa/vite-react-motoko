@@ -1,3 +1,5 @@
+# Online IDE configuration (safe to delete)
+
 tasks:
   - before: |
       npm install &
