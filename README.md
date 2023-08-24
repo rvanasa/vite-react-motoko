@@ -4,11 +4,11 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rvanasa/vite-react-motoko)
 
-This project template gives you everything you need to build a Web3 application on the [Internet Computer](https://internetcomputer.org/).
+This template gives you everything you need to build a full-stack Web3 application on the [Internet Computer](https://internetcomputer.org/).
 
-For an example of a real-world dapp built using this template, check out the [source code](https://github.com/dfinity/feedback) for DFINITY's [Developer Experience Feedback Board](https://dx.internetcomputer.org/).
+For an example of a real-world dapp built using this starter project, check out the [source code](https://github.com/dfinity/feedback) for DFINITY's [Developer Experience Feedback Board](https://dx.internetcomputer.org/).
 
-## Create a New Project
+## 📦 Create a New Project
 
 Make sure that [Node.js](https://nodejs.org/en/) `>= 16.x` and [`dfx`](https://internetcomputer.org/docs/current/developer-docs/build/install-upgrade-remove) `>= 0.12.x` are installed on your system.
 
@@ -24,7 +24,7 @@ npm start # Start the development server
 
 When ready, run `dfx deploy --network ic` to deploy your application to the Internet Computer.
 
-## Technology Stack
+## 🛠️ Technology Stack
 
 - [Vite](https://vitejs.dev/): high-performance tooling for front-end web development
 - [React](https://reactjs.org/): a component-based UI library
@@ -35,7 +35,7 @@ When ready, run `dfx deploy --network ic` to deploy your application to the Inte
 - [Mops](https://mops.one): an on-chain community package manager for Motoko
 - [mo-dev](https://github.com/dfinity/motoko-dev-server#readme): a live reload development server for Motoko
 
-## Documentation
+## 📚 Documentation
 
 - [Vite developer docs](https://vitejs.dev/guide/)
 - [React quick start guide](https://react.dev/learn)
@@ -44,7 +44,7 @@ When ready, run `dfx deploy --network ic` to deploy your application to the Inte
 - [Motoko developer docs](https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/)
 - [Mops usage instructions](https://j4mwm-bqaaa-aaaam-qajbq-cai.ic0.app/#/docs/install)
 
-## Tips and Tricks
+## 💡 Tips and Tricks
 
 - Customize your project's code style by editing the `.prettierrc` file and then running `npm run format`.
 - Reduce the latency of update calls by passing the `--emulator` flag to `dfx start`.
