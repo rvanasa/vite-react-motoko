@@ -8,7 +8,7 @@ tasks:
       echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
       sudo apt-get install -q -y libunwind-dev
       sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
-      dfx start --background --emulator --clean
+      dfx start --background --clean
       npm run setup
     init: |
       npm start
