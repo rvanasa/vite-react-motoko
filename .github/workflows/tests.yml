@@ -26,8 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install dfx
-      run: |
-        echo y | bash -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
+      uses: dfinity/setup-dfx@main
     - name: Start dfx
       run: |
         dfx cache install
