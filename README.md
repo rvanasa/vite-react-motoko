@@ -1,9 +1,5 @@
 # Vite + React + Motoko
 
-### Get started directly in your browser:
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rvanasa/vite-react-motoko)
-
 This project template gives you everything you need to build a Web3 application on the [Internet Computer](https://internetcomputer.org/).
 
 For an example of a real-world dapp built using this template, check out the [source code](https://github.com/dfinity/feedback) for DFINITY's [Developer Experience Feedback Board](https://dx.internetcomputer.org/).
