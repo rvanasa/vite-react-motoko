@@ -1,4 +1,4 @@
-# Vite + React + Motoko
+# Vite + React + Motoko + EVM RPC
 
 ### Get started directly in your browser:
 
@@ -34,6 +34,7 @@ When ready, run `dfx deploy --network ic` to deploy your application to the Inte
 - [Motoko](https://github.com/dfinity/motoko#readme): a safe and simple programming language for the Internet Computer
 - [Mops](https://mops.one): an on-chain community package manager for Motoko
 - [mo-dev](https://github.com/dfinity/motoko-dev-server#readme): a live reload development server for Motoko
+- [EVM RPC canister](https://github.com/internet-computer-protocol/evm-rpc-canister): call Ethereum RPC methods from an IC canister
 
 ## 📚 Documentation
 
@@ -43,6 +44,7 @@ When ready, run `dfx deploy --network ic` to deploy your application to the Inte
 - [`dfx.json` reference schema](https://internetcomputer.org/docs/current/references/dfx-json-reference/)
 - [Motoko developer docs](https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/)
 - [Mops usage instructions](https://j4mwm-bqaaa-aaaam-qajbq-cai.ic0.app/#/docs/install)
+- [EVM RPC developer docs](https://internetcomputer.org/docs/current/developer-docs/integrations/ethereum/evm-rpc/)
 
 ## 💡 Tips and Tricks
 
