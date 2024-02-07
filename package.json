@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "setup": "npm i && dfx canister create backend && dfx generate backend && dfx deploy",
+    "setup": "npm i && npm run setup:evm_rpc && npm run setup:backend",
+    "setup:evm_rpc": "dfx deploy evm_rpc --argument '(record { nodesInSubnet = 28 })'",
+    "setup:backend": "dfx canister create backend && dfx generate backend && dfx deploy",
     "start": "run-p frontend backend",
     "frontend": "vite --port 3000",
     "backend": "mo-dev --generate --deploy -y",

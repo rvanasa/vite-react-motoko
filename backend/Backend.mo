@@ -1,18 +1,24 @@
-actor class Backend() {
-  stable var counter = 0;
+import EvmRpc "canister:evm_rpc";
 
-  // Get the current count
-  public query func get() : async Nat {
-    counter;
-  };
+import Debug "mo:base/Debug";
+import Cycles "mo:base/ExperimentalCycles";
 
-  // Increment the count by one
-  public func inc() : async () {
-    counter += 1;
-  };
-
-  // Add `n` to the current count
-  public func add(n : Nat) : async () {
-    counter += n;
+actor {
+  /// Retrieve the latest block on the Ethereum blockchain.
+  public func getLatestEthereumBlock() : async EvmRpc.Block {
+    // Unused cycles will be refunded
+    Cycles.add(1000000000);
+    let result = await EvmRpc.eth_getBlockByNumber(#EthMainnet(?[#Cloudflare]), null, #Latest);
+    switch result {
+      case (#Consistent(#Ok block)) {
+        block;
+      };
+      case (#Consistent(#Err error)) {
+        Debug.trap("Error: " # debug_show error);
+      };
+      case (#Inconsistent(results)) {
+        Debug.trap("Inconsistent results");
+      };
+    };
   };
 };

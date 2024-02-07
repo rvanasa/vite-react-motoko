@@ -26,6 +26,7 @@ dist-ssr
 
 # Canisters
 /src/declarations
+/deps
 .dfx
 .vessel
 .mops
