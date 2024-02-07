@@ -5,11 +5,11 @@ import Cycles "mo:base/ExperimentalCycles";
 
 actor {
 
-  // Select RPC providers
-  let source : EvmRpc.RpcSource = #EthMainnet(?[#Cloudflare]);
-
   /// Retrieve the latest block on the Ethereum blockchain.
   public func getLatestEthereumBlock() : async EvmRpc.Block {
+
+    // Select RPC providers
+    let source : EvmRpc.RpcSource = #EthMainnet(?[#Cloudflare]);
 
     // Call `eth_getBlockByNumber` RPC method (unused cycles will be refunded)
     Cycles.add(1000000000);
