@@ -3,7 +3,7 @@ import './App.css';
 import motokoLogo from './assets/motoko_moving.png';
 import motokoShadowLogo from './assets/motoko_shadow.png';
 import reactLogo from './assets/react.svg';
-import viteLogo from './assets/vite.svg';
+import ethLogo from './assets/eth.svg';
 import { backend } from './declarations/backend';
 import { Block } from './declarations/backend/backend.did';
 
@@ -33,9 +33,6 @@ function App() {
   return (
     <div className="App">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo vite" alt="Vite logo" />
-        </a>
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
@@ -52,8 +49,11 @@ function App() {
             <img src={motokoLogo} className="logo motoko" alt="Motoko logo" />
           </span>
         </a>
+        <a href="https://github.com/internet-computer-protocol/evm-rpc-canister#readme" target="_blank">
+          <img src={ethLogo} className="logo ethereum" alt="Ethereum logo" />
+        </a>
       </div>
-      <h1>Vite + React + Motoko</h1>
+      <h1>React + Motoko + EVM RPC</h1>
       <div className="card">
         <button onClick={fetchBlock} style={{ opacity: loading ? 0.5 : 1 }}>
           Get latest Ethereum block
