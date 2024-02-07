@@ -14,8 +14,8 @@ function App() {
 
   const fetchBlock = async () => {
     try {
-      setError(undefined);
       setLoading(true);
+      setError(undefined);
       const block = await backend.getLatestEthereumBlock();
       setBlock(block);
     } catch (err) {
@@ -59,7 +59,14 @@ function App() {
           Get latest Ethereum block
         </button>
         {!!block && (
-          <pre style={{ textAlign: 'left' }}>
+          <pre
+            style={{
+              textAlign: 'left',
+              color: 'darkgreen',
+              maxWidth: 800,
+              opacity: loading ? 0.5 : 1,
+            }}
+          >
             {JSON.stringify(
               block,
               (_, v) => (typeof v === 'bigint' ? v.toString() : v),
@@ -67,7 +74,9 @@ function App() {
             )}
           </pre>
         )}
-        {!!error && <pre style={{ color: 'red' }}>{error}</pre>}
+        {!!error && (
+          <pre style={{ textAlign: 'left', color: 'darkred' }}>{error}</pre>
+        )}
         <p>
           Edit <code>backend/Backend.mo</code> and save to test HMR
         </p>

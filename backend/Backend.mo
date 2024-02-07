@@ -4,12 +4,17 @@ import Debug "mo:base/Debug";
 import Cycles "mo:base/ExperimentalCycles";
 
 actor {
+
+  // Select RPC providers
+  let source : EvmRpc.RpcSource = #EthMainnet(?[#BlockPi, #Cloudflare]);
+
   /// Retrieve the latest block on the Ethereum blockchain.
   public func getLatestEthereumBlock() : async EvmRpc.Block {
-    // Unused cycles will be refunded
+
+    // Call `eth_getBlockByNumber` RPC method (unused cycles will be refunded)
     Cycles.add(1000000000);
-    // Call `eth_getBlockByNumber` RPC method
-    let result = await EvmRpc.eth_getBlockByNumber(#EthMainnet(?[#Cloudflare]), null, #Latest);
+    let result = await EvmRpc.eth_getBlockByNumber(source, null, #Latest);
+
     switch result {
       // Consistent, successful results
       case (#Consistent(#Ok block)) {
