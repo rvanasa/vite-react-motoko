@@ -17,6 +17,21 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.react {
+    animation: logo-spin infinite 60s linear;
+  }
+}
+
 .logo.motoko:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -28,6 +43,42 @@
 .logo-stack > * {
   grid-column: 1;
   grid-row: 1;
+}
+
+@keyframes logo-swim {
+  from {
+    transform: rotate(4deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-5deg) translateY(0);
+  }
+  to {
+    transform: rotate(4deg) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.motoko {
+    animation: logo-swim 5s ease-in-out infinite;
+  }
+}
+
+@keyframes logo-pulse {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.ethereum {
+    animation: logo-pulse 5s ease-in-out infinite;
+  }
 }
 
 .card {
