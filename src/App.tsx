@@ -77,12 +77,9 @@ function App() {
         {!!error && (
           <pre style={{ textAlign: 'left', color: 'darkred' }}>{error}</pre>
         )}
-        <p>
-          Edit <code>backend/Backend.mo</code> and save to test HMR
-        </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite, React, and Motoko logos to learn more
+        Click on the React, Motoko, and Ethereum logos to learn more
       </p>
     </div>
   );
