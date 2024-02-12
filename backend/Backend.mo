@@ -9,11 +9,11 @@ actor {
   public func getLatestEthereumBlock() : async EvmRpc.Block {
 
     // Select RPC providers
-    let source : EvmRpc.RpcServices = #EthMainnet(?[#Cloudflare]);
+    let services : EvmRpc.RpcServices = #EthMainnet(?[#Cloudflare]);
 
     // Call `eth_getBlockByNumber` RPC method (unused cycles will be refunded)
     Cycles.add(1000000000);
-    let result = await EvmRpc.eth_getBlockByNumber(source, null, #Latest);
+    let result = await EvmRpc.eth_getBlockByNumber(services, null, #Latest);
 
     switch result {
       // Consistent, successful results
