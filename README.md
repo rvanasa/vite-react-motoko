@@ -34,7 +34,7 @@ When ready, run `dfx deploy --network ic` to deploy your application to the Inte
 - [Motoko](https://github.com/dfinity/motoko#readme): a safe and simple programming language for the Internet Computer
 - [Mops](https://mops.one): an on-chain community package manager for Motoko
 - [mo-dev](https://github.com/dfinity/motoko-dev-server#readme): a live reload development server for Motoko
-- [EVM RPC canister](https://github.com/internet-computer-protocol/evm-rpc-canister): call Ethereum RPC methods from an IC canister
+- [EVM RPC canister](https://github.com/internet-computer-protocol/evm-rpc-canister): call Ethereum RPC methods from the Internet Computer
 
 ## 📚 Documentation
 
