@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+import './App.scss';
 import motokoLogo from './assets/motoko_moving.png';
 import motokoShadowLogo from './assets/motoko_shadow.png';
 import reactLogo from './assets/react.svg';
 import ethLogo from './assets/eth.svg';
 import { backend } from './declarations/backend';
 import { Block } from './declarations/backend/backend.did';
+
+// JSON viewer component
+import { JsonView, allExpanded, defaultStyles } from 'react-json-view-lite';
+import 'react-json-view-lite/dist/index.css';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -26,10 +30,6 @@ function App() {
     }
   };
 
-  // useEffect(() => {
-  //   fetchBlock();
-  // }, []);
-
   return (
     <div className="App">
       <div>
@@ -49,7 +49,10 @@ function App() {
             <img src={motokoLogo} className="logo motoko" alt="Motoko logo" />
           </span>
         </a>
-        <a href="https://github.com/internet-computer-protocol/evm-rpc-canister#readme" target="_blank">
+        <a
+          href="https://github.com/internet-computer-protocol/evm-rpc-canister#readme"
+          target="_blank"
+        >
           <img src={ethLogo} className="logo ethereum" alt="Ethereum logo" />
         </a>
       </div>
@@ -59,19 +62,12 @@ function App() {
           Get latest Ethereum block
         </button>
         {!!block && (
-          <pre
-            style={{
-              textAlign: 'left',
-              color: 'darkgreen',
-              maxWidth: 800,
-              opacity: loading ? 0.5 : 1,
-            }}
-          >
-            {JSON.stringify(
-              block,
-              (_, v) => (typeof v === 'bigint' ? v.toString() : v),
-              2,
-            )}
+          <pre className="json-view" style={{ opacity: loading ? 0.5 : 1 }}>
+            <JsonView
+              data={block}
+              shouldExpandNode={allExpanded}
+              style={{ ...defaultStyles, container: '' }}
+            />
           </pre>
         )}
         {!!error && (
