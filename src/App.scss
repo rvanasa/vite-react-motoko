@@ -83,9 +83,28 @@
 
 .card {
   padding: 2em;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+/* https://css-loaders.com */
+.loader {
+  background: #888;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  width: 40px;
+  aspect-ratio: 1;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {
+  0% {
+    transform: perspective(150px) rotateX(0deg);
+  }
+  100% {
+    transform: perspective(150px) rotateX(180deg);
+  }
 }

@@ -69,8 +69,9 @@ function App() {
           </pre>
         )}
         {!!error && (
-          <pre style={{ textAlign: 'left', color: 'darkred' }}>{error}</pre>
+          <pre style={{ textAlign: 'left', color: 'red' }}>{error}</pre>
         )}
+        {!!loading && !block && !error && <div className="loader" />}
       </div>
       <p className="read-the-docs">
         Click on the React, Motoko, and Ethereum logos to learn more
