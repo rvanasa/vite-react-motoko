@@ -57,12 +57,10 @@ function App() {
         </a>
       </div>
       <h1>React + Motoko + EVM RPC</h1>
-      <div className="card">
-        <button onClick={fetchBlock} style={{ opacity: loading ? 0.5 : 1 }}>
-          Get latest Ethereum block
-        </button>
+      <div className="card" style={{ opacity: loading ? 0.5 : 1 }}>
+        <button onClick={fetchBlock}>Get latest block</button>
         {!!block && (
-          <pre className="json-view" style={{ opacity: loading ? 0.5 : 1 }}>
+          <pre className="json-view">
             <JsonView
               data={block}
               shouldExpandNode={allExpanded}
