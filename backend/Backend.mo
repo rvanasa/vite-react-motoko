@@ -8,7 +8,7 @@ actor {
   /// Retrieve the latest block on the Ethereum blockchain.
   public func getLatestEthereumBlock() : async EvmRpc.Block {
 
-    // Select RPC providers
+    // Select RPC services
     let services : EvmRpc.RpcServices = #EthMainnet(?[#Cloudflare]);
 
     // Call `eth_getBlockByNumber` RPC method (unused cycles will be refunded)
