@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.scss';
 import motokoLogo from './assets/motoko_moving.png';
 import motokoShadowLogo from './assets/motoko_shadow.png';
