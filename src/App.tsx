@@ -56,7 +56,7 @@ function App() {
           <img src={ethLogo} className="logo ethereum" alt="Ethereum logo" />
         </a>
       </div>
-      <h1>React + Motoko + EVM RPC</h1>
+      <h1>React + Motoko + EVM</h1>
       <div className="card" style={{ opacity: loading ? 0.5 : 1 }}>
         <button onClick={fetchBlock}>Get latest block</button>
         {!!block && (
