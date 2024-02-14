@@ -37,6 +37,12 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
         <a
+          href="https://github.com/internet-computer-protocol/evm-rpc-canister#readme"
+          target="_blank"
+        >
+          <img src={ethLogo} className="logo ethereum" alt="Ethereum logo" />
+        </a>
+        <a
           href="https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/"
           target="_blank"
         >
@@ -49,14 +55,8 @@ function App() {
             <img src={motokoLogo} className="logo motoko" alt="Motoko logo" />
           </span>
         </a>
-        <a
-          href="https://github.com/internet-computer-protocol/evm-rpc-canister#readme"
-          target="_blank"
-        >
-          <img src={ethLogo} className="logo ethereum" alt="Ethereum logo" />
-        </a>
       </div>
-      <h1>React + Motoko + EVM</h1>
+      <h1 style={{ paddingLeft: 36 }}>React + EVM RPC + Motoko</h1>
       <div className="card" style={{ opacity: loading ? 0.5 : 1 }}>
         <button onClick={fetchBlock}>Get latest block</button>
         {!!block && (
