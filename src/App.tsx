@@ -69,7 +69,7 @@ function App() {
           </pre>
         )}
         {!!error && (
-          <pre style={{ textAlign: 'left', color: 'red' }}>{error}</pre>
+          <pre style={{ textAlign: 'left', color: 'grey' }}>{error}</pre>
         )}
         {!!loading && !block && !error && <div className="loader" />}
       </div>
