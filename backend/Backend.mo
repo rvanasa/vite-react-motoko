@@ -12,7 +12,7 @@ actor {
     let services : EvmRpc.RpcServices = #EthMainnet(?[#Cloudflare]);
 
     // Call `eth_getBlockByNumber` RPC method (unused cycles will be refunded)
-    Cycles.add(1000000000);
+    Cycles.add<system>(1000000000);
     let result = await EvmRpc.eth_getBlockByNumber(services, null, #Latest);
 
     switch result {
