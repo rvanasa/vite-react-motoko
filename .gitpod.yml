@@ -7,7 +7,8 @@ tasks:
       export PATH="$HOME/bin:$PATH"
       echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
       sudo apt-get install -q -y libunwind-dev
-      sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+      DFXVM_INIT_YES=1 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+      source "$HOME/.local/share/dfx/env"
       dfx start --background --clean 2>/dev/null
       npm run setup
     init: |
