@@ -17,13 +17,11 @@
     "postinstall": "mops install"
   },
   "dependencies": {
+    "@ic-reactor/react": "^1.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@dfinity/agent": "^0.18.1",
-    "@dfinity/candid": "^0.18.1",
-    "@dfinity/principal": "^0.18.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.14",
