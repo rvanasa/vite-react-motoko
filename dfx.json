@@ -2,7 +2,10 @@
   "canisters": {
     "backend": {
       "type": "motoko",
-      "main": "backend/Backend.mo"
+      "main": "backend/Backend.mo",
+      "declarations": {
+        "node_compatibility": true
+      }
     },
     "frontend": {
       "dependencies": ["backend"],
