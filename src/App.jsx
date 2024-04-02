@@ -1,19 +1,19 @@
-import motokoLogo from "./assets/motoko_moving.png"
-import motokoShadowLogo from "./assets/motoko_shadow.png"
-import reactLogo from "./assets/react.svg"
-import { useQueryCall, useUpdateCall } from "@ic-reactor/react"
+import motokoLogo from "./assets/motoko_moving.png";
+import motokoShadowLogo from "./assets/motoko_shadow.png";
+import reactLogo from "./assets/react.svg";
+import { useQueryCall, useUpdateCall } from "@ic-reactor/react";
 
 function App() {
   const { data: count, call: refetchCount } = useQueryCall({
     functionName: "get",
-  })
+  });
 
   const { call: increment, loading } = useUpdateCall({
     functionName: "inc",
     onSuccess: () => {
-      refetchCount()
+      refetchCount();
     },
-  })
+  });
 
   return (
     <div className="App">
@@ -51,7 +51,7 @@ function App() {
         Click on the Vite, React, and Motoko logos to learn more
       </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
