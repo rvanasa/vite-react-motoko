@@ -1,34 +1,18 @@
-import { useState } from 'react';
 import './App.scss';
 import motokoLogo from './assets/motoko_moving.png';
 import motokoShadowLogo from './assets/motoko_shadow.png';
 import reactLogo from './assets/react.svg';
 import ethLogo from './assets/eth.svg';
-import { backend } from './declarations/backend';
-import { Block } from './declarations/backend/backend.did';
 
 // JSON viewer component
 import { JsonView, allExpanded, defaultStyles } from 'react-json-view-lite';
 import 'react-json-view-lite/dist/index.css';
+import { useUpdateCall } from '@ic-reactor/react';
 
 function App() {
-  const [loading, setLoading] = useState(false);
-  const [block, setBlock] = useState<Block | undefined>();
-  const [error, setError] = useState<string | undefined>();
-
-  const fetchBlock = async () => {
-    try {
-      setLoading(true);
-      setError(undefined);
-      const block = await backend.getLatestEthereumBlock();
-      setBlock(block);
-    } catch (err) {
-      console.error(err);
-      setError(String(err));
-    } finally {
-      setLoading(false);
-    }
-  };
+  const { data, error, loading, call } = useUpdateCall({
+    functionName: 'getLatestEthereumBlock',
+  });
 
   return (
     <div className="App">
@@ -58,20 +42,24 @@ function App() {
       </div>
       <h1 style={{ paddingLeft: 36 }}>React + EVM RPC + Motoko</h1>
       <div className="card" style={{ opacity: loading ? 0.5 : 1 }}>
-        <button onClick={fetchBlock}>Get latest block</button>
-        {!!block && (
+        <button onClick={call} disabled={loading}>
+          Get latest block
+        </button>
+        {!!data && (
           <pre className="json-view">
             <JsonView
-              data={block}
+              data={data}
               shouldExpandNode={allExpanded}
               style={{ ...defaultStyles, container: '' }}
             />
           </pre>
         )}
         {!!error && (
-          <pre style={{ textAlign: 'left', color: 'grey' }}>{error}</pre>
+          <pre style={{ textAlign: 'left', color: 'grey' }}>
+            {error.message}
+          </pre>
         )}
-        {!!loading && !block && !error && <div className="loader" />}
+        {!!loading && !data && !error && <div className="loader" />}
       </div>
       <p className="read-the-docs">
         Click on the React, Motoko, and Ethereum logos to learn more
