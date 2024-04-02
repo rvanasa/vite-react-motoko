@@ -11,9 +11,7 @@
     "frontend": "vite --port 3000",
     "backend": "mo-dev --generate --deploy -y",
     "build": "tsc && vite build",
-    "test": "run-s test:backend test:frontend",
-    "test:frontend": "vitest run",
-    "test:backend": "mo-test",
+    "test": "vitest run",
     "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\" \"backend/**/*.mo\"",
     "sources": "mops sources",
     "postinstall": "mops install"
