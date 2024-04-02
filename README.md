@@ -34,6 +34,7 @@ When ready, run `dfx deploy --network ic` to deploy your application to the Inte
 - [Motoko](https://github.com/dfinity/motoko#readme): a safe and simple programming language for the Internet Computer
 - [Mops](https://mops.one): an on-chain community package manager for Motoko
 - [mo-dev](https://github.com/dfinity/motoko-dev-server#readme): a live reload development server for Motoko
+- [@ic-reactor](https://github.com/B3Pay/ic-reactor): A suite of JavaScript libraries for seamless frontend development on the Internet Computer
 
 ## 📚 Documentation
 
@@ -43,6 +44,7 @@ When ready, run `dfx deploy --network ic` to deploy your application to the Inte
 - [`dfx.json` reference schema](https://internetcomputer.org/docs/current/references/dfx-json-reference/)
 - [Motoko developer docs](https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/)
 - [Mops usage instructions](https://j4mwm-bqaaa-aaaam-qajbq-cai.ic0.app/#/docs/install)
+- [@ic-reactor/react](https://b3pay.github.io/ic-reactor/modules/react.html)
 
 ## 💡 Tips and Tricks
 
