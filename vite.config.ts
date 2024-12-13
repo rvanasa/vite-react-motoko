@@ -1,8 +1,8 @@
 /// <reference types="vitest" />
 import react from '@vitejs/plugin-react';
+import dotenv from 'dotenv';
 import { defineConfig } from 'vite';
 import environment from 'vite-plugin-environment';
-import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -32,9 +32,9 @@ export default defineConfig({
     environment('all', { prefix: 'CANISTER_' }),
     environment('all', { prefix: 'DFX_' }),
   ],
+  cacheDir: '../node_modules/.vite',
   test: {
     environment: 'jsdom',
     setupFiles: 'setupTests.ts',
-    cache: { dir: '../node_modules/.vitest' },
   },
 });
